@@ -1,0 +1,398 @@
+/* ==========================================================================
+   HOJA DE ESTILOS - TIENDA MORTAL
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. FUENTE GLOBAL
+   Importa la fuente Inter desde Google Fonts.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+
+/* ==========================================================================
+   2. VARIABLES GLOBALES
+   Define colores, tipografía y propiedades reutilizables.
+   ========================================================================== */
+
+:root {
+
+    /* Colores principales */
+    --bg-main: #2b0000;          /* Fondo general de la página */
+    --bg-card: #1b0101;          /* Fondo de tarjetas y encabezado */
+    --bg-footer: #0b1120;        /* Fondo del pie de página */
+    --bg-hover: #334155;         /* Fondo al pasar el mouse */
+
+    --primary: #3b82f6;          /* Color principal */
+    --primary-hover: #60a5fa;    /* Color principal en estado hover */
+
+    /* Colores de texto */
+    --text-main: #e2e8f0;
+    --text-heading: #f8fafc;
+    --text-muted: #94a3b8;
+    --text-subtle: #64748b;
+
+    /* Color de bordes */
+    --border-color: #334155;
+
+    /* Tipografía principal */
+    --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+
+    /* Bordes redondeados */
+    --radius-sm: 6px;
+    --radius-lg: 12px;
+
+    /* Duración de transiciones */
+    --transition-fast: 0.2s ease;
+}
+
+
+/* ==========================================================================
+   3. RESET BÁSICO Y MODELO DE CAJAS
+
+   Incluye padding y border dentro del tamaño total del elemento.
+   Elimina los márgenes y espacios internos agregados por defecto.
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ==========================================================================
+   4. ESTILO GENERAL DE LA PÁGINA
+
+   Define la tipografía, color de fondo y color principal del texto.
+   ========================================================================== */
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+
+/* ==========================================================================
+   5. SELECTOR POR ID
+
+   El símbolo # selecciona el elemento que posee el ID featured-products.
+   ========================================================================== */
+
+#featured-products {
+    border: 2px solid var(--primary);
+    padding: 20px;
+    border-radius: var(--radius-lg);
+}
+
+
+/* ==========================================================================
+   6. ENCABEZADO PRINCIPAL
+   ========================================================================== */
+
+.site-header {
+    background-color: var(--bg-card);
+
+    /* Agrega un borde inferior al encabezado */
+    border-bottom: 2px solid var(--primary);
+
+    /* Define el espacio interno */
+    padding: 30px 20px 15px 20px;
+
+    /* Centra el contenido */
+    text-align: center;
+}
+
+
+/* Define el estilo del título principal */
+.store-title {
+    color: var(--text-heading);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+
+/* Define el estilo del texto secundario del encabezado */
+.store-tagline {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+
+/* ==========================================================================
+   7. MENÚ DE NAVEGACIÓN
+   ========================================================================== */
+
+/* Selecciona la lista ubicada dentro del menú principal */
+.main-nav ul {
+
+    /* Elimina los marcadores de la lista */
+    list-style: none;
+
+    /* Activa Flexbox */
+    display: flex;
+
+    /* Centra los elementos horizontalmente */
+    justify-content: center;
+
+    /* Permite ajustar los elementos cuando no existe espacio suficiente */
+    flex-wrap: wrap;
+
+    /* Define la separación entre los enlaces */
+    gap: 15px;
+}
+
+
+/* Define el estilo de los enlaces del menú */
+.main-nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 600;
+
+    padding: 8px 16px;
+
+    border-radius: var(--radius-sm);
+
+    transition:
+        background-color var(--transition-fast),
+        color var(--transition-fast);
+}
+
+
+/* Aplica estilos cuando el cursor se posiciona sobre un enlace */
+.main-nav a:hover {
+    background-color: var(--bg-hover);
+    color: var(--primary-hover);
+}
+
+.main-nav a:focus-visible {
+    outline: 3px solid var(--primary-hover);
+    outline-offset: 3px;
+}                           
+
+
+/* ==========================================================================
+   8. CONTENIDO PRINCIPAL
+   ========================================================================== */
+
+.main-content {
+
+    /* Limita el ancho máximo del contenido */
+    max-width: 1100px;
+
+    /* Agrega separación vertical y centra horizontalmente */
+    margin: 40px auto;
+
+    /* Agrega espacio interno a ambos lados */
+    padding: 0 20px;
+}
+
+
+/* Define la separación inferior de la sección de productos */
+.products-section {
+    margin-bottom: 50px;
+}
+
+
+/* Define el estilo del título de la sección */
+.section-title {
+    color: var(--text-heading);
+    font-size: 1.6rem;
+
+    border-left: 4px solid var(--primary);
+
+    padding-left: 12px;
+    margin-bottom: 25px;
+}
+
+
+/* ==========================================================================
+   9. CONTENEDOR DE PRODUCTOS
+
+   Organiza las tarjetas utilizando CSS Grid.
+   ========================================================================== */
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* ==========================================================================
+   10. TARJETAS DE PRODUCTOS
+   ========================================================================== */
+
+/* Define el diseño general de cada tarjeta */
+.product-card {
+    background-color: var(--bg-card);
+
+    /* Delimita visualmente cada producto */
+    border: 1px solid var(--border-color);
+
+    /* Redondea las esquinas */
+    border-radius: var(--radius-lg);
+
+    /* Evita que el contenido sobresalga de la tarjeta */
+    overflow: hidden;
+
+
+    /* Define una transición suave */
+    transition:
+        transform var(--transition-fast),
+        border-color var(--transition-fast);
+}
+
+
+/* Aplica un efecto al posicionar el cursor sobre una tarjeta */
+.product-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--primary);
+}
+
+
+/* Imágenes responsivas con proporción estable */
+.product-img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Define el espacio interno del contenido de cada tarjeta */
+.product-body {
+    padding: 20px;
+}
+
+
+/* Define el estilo del título del producto */
+.product-title a {
+    color: var(--text-heading);
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+
+/* Cambia el color del título al posicionar el cursor */
+.product-title a:hover {
+    color: var(--primary-hover);
+}
+
+.product-title a:focus-visible {
+    outline: 3px solid var(--primary-hover);
+    outline-offset: 3px;
+}
+
+
+/* Define el estilo de la descripción del producto */
+.product-description {
+    color: var(--text-muted);
+    margin-top: 10px;
+    font-size: 0.95rem;
+}
+
+
+/* ==========================================================================
+   11. SELECTOR AVANZADO :nth-child()
+
+   Selecciona la primera tarjeta ubicada dentro del contenedor products-grid.
+   ========================================================================== */
+
+.products-grid .product-card:nth-child(1) {
+    border-top: 4px solid var(--primary);
+}
+
+
+/* ==========================================================================
+   12. PIE DE PÁGINA
+   ========================================================================== */
+
+.site-footer {
+    background-color: var(--bg-footer);
+    border-top: 1px solid var(--bg-card);
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Selecciona los párrafos ubicados dentro de footer-info */
+.footer-info p {
+    color: var(--text-subtle);
+    font-size: 0.9rem;
+}
+
+
+/* ==========================================================================
+   13. DISEÑO RESPONSIVE
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   MÓVIL
+   Pantallas de hasta 767px
+   -------------------------------------------------------------------------- */
+
+@media screen and (max-width: 767px) {
+
+    /* Cambia el menú de distribución horizontal a vertical */
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    /* Hace que los enlaces ocupen todo el ancho disponible */
+    .main-nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Organiza los productos en una sola columna */
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+
+/* --------------------------------------------------------------------------
+   TABLET
+   Pantallas desde 768px hasta 1023px
+   -------------------------------------------------------------------------- */
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /* Organiza los productos en dos columnas */
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+}
+
+
+/* --------------------------------------------------------------------------
+   DESKTOP
+   Pantallas desde 1024px en adelante
+   -------------------------------------------------------------------------- */
+
+@media screen and (min-width: 1024px) {
+
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+}
