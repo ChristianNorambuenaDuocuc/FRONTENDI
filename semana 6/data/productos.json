@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "titulo": "Red Dead Redemption",
+        "descripcion": "Prepárate para una aventura llena de acción, exploración y decisiones.",
+        "precio": 39990,
+        "categoria": "Acción",
+        "imagen": {
+            "src": "imagenes/rdr3.avif",
+            "alt": "Red Dead Redemption"
+        },
+        "boton": {
+            "texto": "Agregar al carrito",
+            "url": "#"
+        }
+    },
+    {
+        "id": 2,
+        "titulo": "Baldur's Gate 3",
+        "descripcion": "Explora un enorme mundo de fantasía y crea tu propia historia.",
+        "precio": 49990,
+        "categoria": "RPG",
+        "imagen": {
+            "src": "imagenes/bg3.jpg",
+            "alt": "Baldur's Gate 3"
+        },
+        "boton": {
+            "texto": "Agregar al carrito",
+            "url": "#"
+        }
+    },
+    {
+        "id": 3,
+        "titulo": "Dark Souls",
+        "descripcion": "Explora un mundo oscuro lleno de secretos y peligros.",
+        "precio": 29990,
+        "categoria": "RPG",
+        "imagen": {
+            "src": "imagenes/darksolus.jpg",
+            "alt": "Dark Souls"
+        },
+        "boton": {
+            "texto": "Agregar al carrito",
+            "url": "#"
+        }
+    }
+]
