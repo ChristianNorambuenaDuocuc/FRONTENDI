@@ -7,7 +7,7 @@
     "precioOferta": 39990,
     "categoria": "Acción",
     "imagen": {
-      "src": "/imagenes/rdr3.avif",
+      "src": "imagenes/rdr3.avif",
       "alt": "Red Dead Redemption"
     }
   },
@@ -19,7 +19,7 @@
     "precioOferta": 49990,
     "categoria": "RPG",
     "imagen": {
-      "src": "/imagenes/bg3.jpg",
+      "src": "imagenes/bg3.jpg",
       "alt": "Baldur's Gate 3"
     }
   },
@@ -31,7 +31,7 @@
     "precioOferta": 29990,
     "categoria": "RPG",
     "imagen": {
-      "src": "/imagenes/darksolus.jpg",
+      "src": "imagenes/darksolus.jpg",
       "alt": "Dark Souls"
     }
   }
