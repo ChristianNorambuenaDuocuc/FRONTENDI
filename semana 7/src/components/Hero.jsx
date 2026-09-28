@@ -15,7 +15,7 @@ function Hero() {
 
           <div className="carousel-item active">
             <img
-              src="/imagenes/bg3.jpg"
+              src={`${import.meta.env.BASE_URL}imagenes/bg3.jpg`}
               className="d-block w-100"
               alt="Baldur's Gate 3"
             />
@@ -23,7 +23,7 @@ function Hero() {
 
           <div className="carousel-item">
             <img
-              src="/imagenes/darksolus.jpg"
+              src={`${import.meta.env.BASE_URL}imagenes/darksolus.jpg`}
               className="d-block w-100"
               alt="Dark Souls"
             />
@@ -31,7 +31,7 @@ function Hero() {
 
           <div className="carousel-item">
             <img
-              src="/imagenes/rdr2.webp"
+              src={`${import.meta.env.BASE_URL}imagenes/rdr2.webp`}
               className="d-block w-100"
               alt="Red Dead Redemption 2"
             />
