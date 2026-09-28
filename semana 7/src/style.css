@@ -1,0 +1,82 @@
+/* ==========================================================================
+   HOJA DE ESTILOS - TIENDA MORTAL
+   ========================================================================== */
+
+
+/* ==========================================================================
+   3. ESTILOS GENERALES
+   ========================================================================== */
+.carousel-item img {
+    width: 100%;
+    height: 600px;
+    object-fit: contain;
+    
+}
+
+.navbar {
+    background-color: #08060c;
+}
+
+body {
+    background-color: #0f172a;
+}
+
+.card-juego {
+    background-color: #1e293b;
+    color: white;
+    border: none;
+}
+
+.card-juego .card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-juego .card-text {
+    color: #d1d5db;
+}
+
+.footer {
+    background-color: #111827;
+    color: white;
+}
+
+.footer a {
+    color: #d1d5db;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+.footer p {
+    color: #d1d5db;
+}
+
+.descripcion-producto {
+    min-height: 72px;
+}
+
+/* Estilos del carrito */
+.carrito-card {
+    background-color: #1e293b;
+    color: white;
+    border: 1px solid #334155;
+}
+
+#carrito {
+    color: white;
+}
+
+#carrito strong {
+    color: white;
+}
+
+#carrito span {
+    color: white;
+}
+
+#total_carrito {
+    color: white;
+}
