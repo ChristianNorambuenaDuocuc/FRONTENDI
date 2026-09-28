@@ -10,16 +10,22 @@ function App() {
   const [carrito, setCarrito] = useState([]);
   const [busqueda, setBusqueda] = useState("");
 
-  useEffect(() => {
-    fetch("/data/productos.json")
-      .then((response) => response.json())
-      .then((data) => {
-        setProductos(data);
-      })
-      .catch((error) => {
-        console.error("Error al cargar productos:", error);
-      });
-  }, []);
+ useEffect(() => {
+  fetch(`${import.meta.env.BASE_URL}data/productos.json`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("No se pudo cargar productos.json");
+      }
+
+      return response.json();
+    })
+    .then((data) => {
+      setProductos(data);
+    })
+    .catch((error) => {
+      console.error("Error al cargar productos:", error);
+    });
+}, []);
 
   const agregarAlCarrito = (producto) => {
     setCarrito([...carrito, producto]);
