@@ -4,7 +4,7 @@ function ProductoCard({ producto, agregarAlCarrito }) {
       <article className="card card-juego h-100">
 
         <img
-          src={producto.imagen.src}
+          src={`${import.meta.env.BASE_URL}${producto.imagen.src}`}
           className="card-img-top"
           alt={producto.imagen.alt}
         />
