@@ -1,4 +1,4 @@
-name: Deploy Semana 7
+name: Deploy Semana 8
 
 on:
   push:
@@ -32,14 +32,14 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: "semana 7/package-lock.json"
+          cache-dependency-path: "semana 8/package-lock.json"
 
       - name: Instalar dependencias
-        working-directory: "semana 7"
+        working-directory: "semana 8"
         run: npm ci
 
       - name: Construir proyecto
-        working-directory: "semana 7"
+        working-directory: "semana 8"
         run: npm run build
 
       - name: Configurar GitHub Pages
@@ -48,7 +48,7 @@ jobs:
       - name: Subir sitio
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "./semana 7/dist"
+          path: "./semana 8/dist"
 
       - name: Publicar
         id: deployment
