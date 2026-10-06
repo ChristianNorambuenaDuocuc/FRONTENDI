@@ -2,7 +2,7 @@ function Footer() {
   return (
     <footer
       className="footer mt-5 py-4"
-      id="contacto"
+      
     >
       <div className="container">
 

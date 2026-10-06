@@ -1,5 +1,5 @@
 /* ==========================================================================
-   HOJA DE ESTILOS - TIENDA MORTAL
+   HOJA DE ESTILOS - GAME ZONE
    ========================================================================== */
 
 
@@ -79,4 +79,10 @@ body {
 
 #total_carrito {
     color: white;
+}
+
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px;
+    }
 }
