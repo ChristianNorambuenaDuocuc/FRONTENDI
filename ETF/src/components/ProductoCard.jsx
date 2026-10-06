@@ -1,5 +1,5 @@
 function ProductoCard({ producto, agregarAlCarrito,
-  estaEnCarrito }) {
+  estaEnCarrito,eliminarVideojuego }) {
   return (
     <div className="col-12 col-md-6 col-lg-4">
       <article className="card card-juego h-100">
@@ -46,6 +46,15 @@ function ProductoCard({ producto, agregarAlCarrito,
           {estaEnCarrito
             ? "✓ En el carrito"
             : "Agregar al carrito"}
+        </button>
+
+        <button
+          className="btn btn-outline-danger mt-2"
+          onClick={() =>
+            eliminarVideojuego(producto.id)
+          }
+        >
+          Eliminar videojuego
         </button>
 
         </div>

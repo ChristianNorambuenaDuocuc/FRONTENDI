@@ -4,6 +4,8 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Products from "./components/Products";
 import Footer from "./components/Footer";
+import Contacto from "./components/Contacto";
+
 
 function App() {
 const [productos, setProductos] = useState([]);
@@ -96,6 +98,16 @@ const eliminarDelCarrito = (idProducto) => {
   setCarrito(nuevoCarrito);
 };
 
+
+
+const eliminarVideojuego = (idProducto) => {
+  const nuevaLista = productos.filter(
+    (producto) => producto.id !== idProducto
+  );
+
+  setProductos(nuevaLista);
+};
+
  return (
   <>
     <Header cantidadCarrito={carrito.length}
@@ -114,12 +126,17 @@ const eliminarDelCarrito = (idProducto) => {
       cargando={cargando}
       error={error}
       reintentar={cargarProductos}
+      eliminarVideojuego={eliminarVideojuego}
     />
+
+      
 
       <Carrito
         carrito={carrito}
         eliminarDelCarrito={eliminarDelCarrito}
       />
+
+      <Contacto />
 
     </main>
 
